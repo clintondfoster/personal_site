@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
 }
 /* Universal Nav Bar Elements */
 nav {
@@ -66,15 +67,6 @@ body {
     padding-top: 20px;
 }
 
-.head3 {
-    font-size: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-} 
-
 .bottom {
     height: 400px;
     padding-top: 70px;
@@ -85,11 +77,21 @@ body {
     text-align: center;
 }
 
-/* About Page */
+.head3 {
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
 
+
+/* About Page */
 #about-page {
     color: whitesmoke;
-    margin: 20px;
+    margin: 20px 30px;
+    width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -97,14 +99,14 @@ body {
     line-height: 1.25;
     font-size: 25px;
     padding-bottom: 20px;
-    color: whitesmoke;
+    padding-right: 40px;
 }
 
 .about-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    flex-wrap: wrap;
+    padding-right: 40px;
     padding-bottom: 80px;
 }
 
@@ -115,21 +117,21 @@ body {
 
 .about {
     display: flex;
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-right: 40px;
     justify-content: center;
-    align-items: stretch;
+    width: 100%;
 }
 
 .text-container {
     font-size: 18px;
-    display: flex;
-    flex-flow: column wrap;
-    /* background-color: blue; */
-    width: 100%
+    width: 100%;
+    margin-top: 10px;
 }
 
 .text {
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .about-image {
@@ -143,24 +145,17 @@ body {
     background-color: black;
     margin-right: 20px;
     margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-.about-image:nth-child(odd) {
-    float: left;
-}
-.about-image:nth-child(even) {
-    float: right;
-}
+
 .about:nth-child(odd) {
-    display: flex;
-    flex-flow: row-reverse;
+    flex-direction: row-reverse;
 }
 
-.about:nth-child(even) {
+.about-title:nth-child(even) {
     display: flex;
-    display: column
+    justify-content: flex-end;
+    margin-right: 60px;
 }
 
 /* Portfolio Page */
@@ -179,7 +174,6 @@ body {
     margin-left: 10%;
 }
 
-
 .project-container {
     display: flex;
     width: 80%;
@@ -188,8 +182,6 @@ body {
     margin: 30px auto;
     padding: 1em;
     padding-bottom: 20px;
-    flex-direction: row;
-    align-items: flex-start;
     flex-wrap: wrap;  
 }
 
@@ -210,8 +202,9 @@ body {
 
 .img-and-text {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
     margin: 10px;
+    width: fit-content;
 }
 
 .port-image {
@@ -223,19 +216,69 @@ body {
         object-fit: cover;
         object-position: 20% 80%;
         background-color: black;
-        flex: 0 0 225px;
-        align-items: flex-start;
+        margin-right: 10px;
     }
 
-.text2 {
+    .text-container2 {
+        font-size: 18px;
+        width: 100%;
+    }    
+
+/* Contact Form Page */
+#form-page {
     display: flex;
-    margin: 0;
-    margin-left: 10px;
-    flex-direction: column;
-    flex: 1;
-    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    color: whitesmoke;
+    min-height: 100vh;
+    box-shadow: 0 0 12px -2px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.head6 {
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.form-container {
+    width: 400px;
+    height: 550px;
+    background-color: rgb(42, 75, 98);
+    padding: 40px 50px 0 50px;
+    color: whitesmoke;
+}
+
+.input {
+    width: 280px;
+    margin: 5px 0 15px;
+    height: 25px;
+}
+
+/* !!! Want to adjust text to top left of message box. */
+#message {
+    height: 150px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.submit {
+    width: 75px;
+}
+.submit:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.done {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    color: whitesmoke;
+    min-height: 100vh;
+    box-shadow: 0 0 12px -2px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
 
 /* Footer and Social Icons */
 footer {
@@ -285,20 +328,29 @@ footer {
   }
 
   /* Media Inquiries*/
-
-  @media only screen and (max-width: 650px) {
+  @media only screen and (max-width: 750px) {
     .links {
         margin: 5px;
         font-size: 15px;
     }
-
     .active {
         margin: 5px;
         font-size: 15px;
     }
-
+    .name {
+        font-size: 20px;
+    }
     .head3 {
         font-size: 30px;
+    }
+
+    .about {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+    }
+
+    .img-and-text {
+        flex-flow: column wrap;
     }
   }
 

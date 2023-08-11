@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js">function alertSubmit() {
+        window.location.href="submitted.html"; console.log("Submitted");
+        }
+        </script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact</title>
+</head>
+<body>
+    <nav>
+        <h1 class="name">Clinton Foster</h1>
+        <div class="nav-links">
+            <a class="links" href="index.html">HOME</a>
+            <a class="links" href="about.html">ABOUT</a>
+            <a class="links" href="portfolio.html">PORTFOLIO</a>
+            <a class="active" href="contact.html">CONTACT</a>
+        </div>
+    </nav> 
+    <section id="form-page">
+        <div class="form-container">
+            <h4 class="head6">Contact Us</h4>
+            <form action="submitted.html">
+                <label for="fname">First Name:</label><br>
+                <input type="text" class="input" id="fname" name="fname"><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" class="input" id="lname" name="lname"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" class="input" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <input type="text" class="input" id="message" placeholder="Type here..." name="message"><br>
+                <input class="submit" type="submit" value="Submit"><br>
+            </form>
+        </div>    
+    </section>  
+</body>
+<footer>
+    <section class="socials">
+        <a href="https://www.facebook.com/clintondfoster/" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/clintondfoster/" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/clinton-foster-8b0521219/" class="fa fa-linkedin"></a>
+    </section>
+</footer>
+</html>
